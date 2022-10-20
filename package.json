@@ -1,0 +1,23 @@
+{
+  "name": "siege-lineup-creator",
+  "version": "1.0.0",
+  "description": "# Date: 10/28/22",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaron-G-Sanchez/Siege-Lineup-Creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaron-G-Sanchez/Siege-Lineup-Creator/issues"
+  },
+  "homepage": "https://github.com/Aaron-G-Sanchez/Siege-Lineup-Creator#readme",
+  "dependencies": {
+    "mongoose": "^6.6.5"
+  }
+}
