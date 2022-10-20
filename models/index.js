@@ -3,6 +3,6 @@ const OperatorSchema = require('./Operator')
 
 const Operator = model('Operator', OperatorSchema)
 
-module.export = {
+module.exports = {
   Operator
 }
