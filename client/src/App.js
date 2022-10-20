@@ -1,17 +1,32 @@
 import './App.css'
-
+import axios from 'axios'
 import Home from './Components/Home'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
+  const [operators, setOperators] = useState([])
+
+  const getOperators = async () => {
+    try {
+      let response = await axios.get('http://localhost:3001/operators')
+      setOperators(response.data.operators)
+      console.log(response.data.operators)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    getOperators()
+  }, [])
   return (
     <>
       <header>
         <h1>Nav goes here</h1>
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home operators={operators} />} />
       </Routes>
     </>
   )
