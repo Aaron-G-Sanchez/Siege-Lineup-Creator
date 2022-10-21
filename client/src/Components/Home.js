@@ -5,17 +5,17 @@ const Home = (props) => {
     <>
       <main>
         <div className="grid-item view-ops">
-          <Link to="/viewOps">
+          <Link to="/view-ops">
             <h3>View Ops</h3>
           </Link>
         </div>
         <div className="grid-item create-teams">
-          <Link to="/createLineup">
+          <Link to="/create-lineup">
             <h1>Create Lineup</h1>
           </Link>
         </div>
         <div className="grid-item view-teams">
-          <Link to="/viewTeams">
+          <Link to="/view-teams">
             <h3>View Teams</h3>
           </Link>
         </div>

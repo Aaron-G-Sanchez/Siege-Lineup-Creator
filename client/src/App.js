@@ -33,12 +33,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home operators={operators} />} />
         <Route
-          path="/viewOps"
+          path="/view-ops"
           element={<ViewOperators operators={operators} />}
         />
-        <Route path="/createLineup" element={<CreateLineup />} />
-        <Route path="/createLineup/attack" element={<AttackCreator />} />
-        <Route path="/createLineup/defense" element={<DefenseCreator />} />
+        <Route path="/create-lineup" element={<CreateLineup />} />
+        <Route path="/create-lineup/attack" element={<AttackCreator />} />
+        <Route path="/create-lineup/defense" element={<DefenseCreator />} />
       </Routes>
     </>
   )

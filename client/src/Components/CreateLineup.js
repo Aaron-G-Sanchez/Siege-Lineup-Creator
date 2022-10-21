@@ -9,10 +9,10 @@ const CreateLineup = () => {
       <Nav />
       <div className="create-lineup-main">
         <div className="side-selection">
-          <Link to="/createLineup/attack">
+          <Link to="/create-lineup/attack">
             <Attack />
           </Link>
-          <Link to="/createLineup/defense">
+          <Link to="/create-lineup/defense">
             <Defense />
           </Link>
         </div>

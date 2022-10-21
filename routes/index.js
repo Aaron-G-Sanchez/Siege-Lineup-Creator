@@ -10,4 +10,6 @@ router.get('/operators', controllers.findAllOperators)
 
 router.get('/operators/attack', controllers.findAttackOps)
 
+router.get('/operators/defense', controllers.findDefenseOps)
+
 module.exports = router
