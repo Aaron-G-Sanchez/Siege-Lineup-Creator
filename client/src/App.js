@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ViewOperators from './Components/ViewOperators'
+import CreateLineup from './Components/CreateLineup'
 
 const App = () => {
   const [operators, setOperators] = useState([])
@@ -33,6 +34,7 @@ const App = () => {
           path="/viewOps"
           element={<ViewOperators operators={operators} />}
         />
+        <Route path="/createLineup" element={<CreateLineup />} />
       </Routes>
     </>
   )
