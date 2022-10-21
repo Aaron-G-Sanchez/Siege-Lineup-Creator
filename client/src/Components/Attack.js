@@ -1,3 +1,5 @@
+import AttackCreator from './AttackCreator'
+
 const Attack = () => {
   return (
     <>

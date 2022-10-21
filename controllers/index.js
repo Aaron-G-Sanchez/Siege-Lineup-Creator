@@ -9,9 +9,9 @@ const findAllOperators = async (req, res) => {
   }
 }
 
-const findAllAttackingOperators = async (req, res) => {
+const findAttackOps = async (req, res) => {
   try {
-    const attackers = await Operator.find()
+    const attackers = await Operator.find({ team: 'Attack' })
     return res.status(200).json({ attackers })
   } catch (err) {
     return res.status(500).send(err.message)
@@ -19,5 +19,6 @@ const findAllAttackingOperators = async (req, res) => {
 }
 
 module.exports = {
-  findAllOperators
+  findAllOperators,
+  findAttackOps
 }

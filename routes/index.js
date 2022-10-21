@@ -8,4 +8,6 @@ router.get('/home', (req, res) => {
 
 router.get('/operators', controllers.findAllOperators)
 
+router.get('/operators/attack', controllers.findAttackOps)
+
 module.exports = router

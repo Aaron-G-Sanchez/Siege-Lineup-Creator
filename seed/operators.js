@@ -31,7 +31,7 @@ const main = async () => {
     },
     {
       name: 'Goyo',
-      primary: ['Vector .45 ACO', 'TCSG12'],
+      primary: ['Vector .45 ACP', 'TCSG12'],
       secondary: 'P229',
       utility: ['Nitro Cell', 'Proximity Alarm'],
       ability: 'Volcan Canister',

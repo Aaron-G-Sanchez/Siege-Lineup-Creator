@@ -1,6 +1,7 @@
 import Attack from './Attack'
 import Defense from './Defense'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
 
 const CreateLineup = () => {
   return (
@@ -8,8 +9,12 @@ const CreateLineup = () => {
       <Nav />
       <div className="create-lineup-main">
         <div className="side-selection">
-          <Attack />
-          <Defense />
+          <Link to="/createLineup/attack">
+            <Attack />
+          </Link>
+          <Link to="/createLineup/defense">
+            <Defense />
+          </Link>
         </div>
       </div>
     </>

@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ViewOperators from './Components/ViewOperators'
 import CreateLineup from './Components/CreateLineup'
+import AttackCreator from './Components/AttackCreator'
+import DefenseCreator from './Components/DefenseCreator'
 
 const App = () => {
   const [operators, setOperators] = useState([])
@@ -35,6 +37,8 @@ const App = () => {
           element={<ViewOperators operators={operators} />}
         />
         <Route path="/createLineup" element={<CreateLineup />} />
+        <Route path="/createLineup/attack" element={<AttackCreator />} />
+        <Route path="/createLineup/defense" element={<DefenseCreator />} />
       </Routes>
     </>
   )
