@@ -11,7 +11,7 @@ const main = async () => {
       secondary: ['ITA12S', 'USP40'],
       utility: ['Proximity Alarm ', 'Nitro Cell'],
       ability: 'Black Mirror',
-      isAttacker: false
+      team: 'Defense'
     },
     {
       name: 'Jackel',
@@ -19,7 +19,7 @@ const main = async () => {
       secondary: ['ITA12S', 'USP40'],
       utility: ['Claymore', 'Smoke Grenade'],
       ability: 'Eyenox Model III',
-      isAttacker: true
+      team: 'Attack'
     },
     {
       name: 'Buck',
@@ -27,7 +27,7 @@ const main = async () => {
       secondary: ['Mk19mm', 'GONNE-6'],
       utility: ['Stun Grenade', 'Hard Breach Charge'],
       ability: 'Skeleton Key',
-      isAttacker: true
+      team: 'Attack'
     },
     {
       name: 'Goyo',
@@ -35,7 +35,7 @@ const main = async () => {
       secondary: 'P229',
       utility: ['Nitro Cell', 'Proximity Alarm'],
       ability: 'Volcan Canister',
-      isAttacker: false
+      team: 'Defense'
     },
     {
       name: 'Iana',
@@ -43,7 +43,7 @@ const main = async () => {
       secondary: 'Mk19mm',
       utility: ['Frag Grenade', 'Smoke Grenade'],
       ability: 'Gemini Replicator',
-      isAttacker: true
+      team: 'Attack'
     },
     {
       name: 'Finka',
@@ -51,7 +51,7 @@ const main = async () => {
       secondary: ['PMM', 'Gsh-18', 'GONNE-6'],
       utility: ['Smoke Grenade', 'Stun Grenade'],
       ability: 'Adrenal Surge',
-      isAttacker: true
+      team: 'Attack'
     },
     {
       name: 'Smoke',
@@ -59,7 +59,7 @@ const main = async () => {
       secondary: ['P226 Mk 25', 'SMG-11'],
       utility: ['Deployable Shiled', 'Barbed Wire'],
       ability: 'Remote Gas Grenade',
-      isAttacker: false
+      team: 'Defense'
     }
   ]
 

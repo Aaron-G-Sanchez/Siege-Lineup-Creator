@@ -7,7 +7,7 @@ const Operator = new Schema(
     secondary: [{ type: String, require: true }],
     utility: [{ type: String, require: true }],
     ability: { type: String, require: true },
-    isAttacker: { type: Boolean, require: true }
+    team: { type: String, require: true }
   },
   { timestamps: true }
 )
