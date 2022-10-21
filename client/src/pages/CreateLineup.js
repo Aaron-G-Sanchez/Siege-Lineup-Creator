@@ -1,5 +1,5 @@
-import Attack from './Attack'
-import Defense from './Defense'
+import Attack from '../components/Attack'
+import Defense from '../components/Defense'
 import Nav from './Nav'
 import { Link } from 'react-router-dom'
 

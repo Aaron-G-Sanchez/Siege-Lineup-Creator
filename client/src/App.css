@@ -8,6 +8,7 @@ main {
 a {
   text-decoration: none;
   color: black;
+  
 }
 
 nav{
@@ -22,7 +23,9 @@ justify-content: center;
 background-color: lightgray;
 border: black 1px solid;
 opacity: .7;
+height: 100vh;
 }
+
 
 .grid-item:hover {
 opacity: 1;
@@ -68,4 +71,23 @@ transition: 300ms;
   opacity: .8;
   height: 320px;
   width: 320px;
+}
+
+.team-selection-grid{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.selection-card{
+  width: 350px;
+  height: 400px;
+  background-color: grey;
+}
+
+.selection-card:hover {
+  opacity: .8;
+
 }
