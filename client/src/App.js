@@ -3,8 +3,9 @@ import axios from 'axios'
 import Home from './Components/Home'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import ViewOperators from './Components/ViewOperators'
 
-function App() {
+const App = () => {
   const [operators, setOperators] = useState([])
 
   const getOperators = async () => {
@@ -20,13 +21,18 @@ function App() {
   useEffect(() => {
     getOperators()
   }, [])
+
   return (
     <>
-      <header>
+      {/* <header>
         <h1>Nav goes here</h1>
-      </header>
+      </header> */}
       <Routes>
         <Route path="/" element={<Home operators={operators} />} />
+        <Route
+          path="/viewOps"
+          element={<ViewOperators operators={operators} />}
+        />
       </Routes>
     </>
   )

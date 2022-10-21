@@ -9,6 +9,15 @@ const findAllOperators = async (req, res) => {
   }
 }
 
+const findAllAttackingOperators = async (req, res) => {
+  try {
+    const attackers = await Operator.find()
+    return res.status(200).json({ attackers })
+  } catch (err) {
+    return res.status(500).send(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators
 }
