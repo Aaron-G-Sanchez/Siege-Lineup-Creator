@@ -6,7 +6,7 @@ import OperatorSelector from '../components/OperatorSelector'
 
 const AttackCreator = () => {
   const [attackers, setAttackers] = useState([])
-  const [selectedAttackers, setSelectedAttackers] = useState([])
+  const [selectedAttacker, setSelectedAttacker] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
   const getAttackOps = async () => {
@@ -22,8 +22,9 @@ const AttackCreator = () => {
     getAttackOps()
   }, [])
 
-  console.log(isClosed)
-
+  const getOperatorId = (id) => {
+    console.log(id)
+  }
   return (
     <>
       <Nav />

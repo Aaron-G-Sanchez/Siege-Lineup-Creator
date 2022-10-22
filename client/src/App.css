@@ -113,3 +113,6 @@ transition: 300ms;
   background-color: #2499ff;
 }
 
+.operator:hover {
+  opacity: .7;
+}
