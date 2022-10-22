@@ -27,8 +27,21 @@ const findDefenseOps = async (req, res) => {
   }
 }
 
+const findAttackOpById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const attackerId = await Operator.findById(id)
+    if (attackerId) {
+      return res.status(200).json({ attackerId })
+    }
+  } catch (err) {
+    return res.status(500).send(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
-  findDefenseOps
+  findDefenseOps,
+  findAttackOpById
 }

@@ -1,7 +1,22 @@
+import axios from 'axios'
+import { useState } from 'react'
+
 const OperatorSelector = (props) => {
-  const getId = (id) => {
-    console.log(id)
+  const [selectedAttacker, setSelectedAttacker] = useState('')
+
+  //STOPPED HERE. AXIOS CALL WORKS AND GRABS PROPER OP ID
+  const getId = async (id) => {
+    try {
+      let response = await axios.get(
+        `http://localhost:3001/operators/attack/${id}`
+      )
+      console.log(response)
+    } catch (err) {
+      console.log(err)
+    }
   }
+
+  console.log(selectedAttacker)
 
   return (
     <>

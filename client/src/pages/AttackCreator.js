@@ -22,9 +22,6 @@ const AttackCreator = () => {
     getAttackOps()
   }, [])
 
-  const getOperatorId = (id) => {
-    console.log(id)
-  }
   return (
     <>
       <Nav />

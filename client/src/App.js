@@ -16,7 +16,6 @@ const App = () => {
     try {
       let response = await axios.get('http://localhost:3001/operators')
       setOperators(response.data.operators)
-      console.log(response.data.operators)
     } catch (err) {
       console.log(err)
     }
