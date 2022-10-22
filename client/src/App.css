@@ -91,3 +91,25 @@ transition: 300ms;
   opacity: .8;
 
 }
+
+.selector-grid{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.operator-grid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 450px;
+  background-color: grey;
+}
+
+.operator{
+  width: 100px;
+  height: 100px;
+  background-color: #2499ff;
+}
+

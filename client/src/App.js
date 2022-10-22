@@ -7,7 +7,7 @@ import ViewOperators from './components/ViewOperators'
 import CreateLineup from './pages/CreateLineup'
 import AttackCreator from './pages/AttackCreator'
 import DefenseCreator from './pages/DefenseCreator'
-import OperatorSelector from './pages/OperatorSelector'
+import OperatorSelector from './components/OperatorSelector'
 
 const App = () => {
   const [operators, setOperators] = useState([])
@@ -37,10 +37,6 @@ const App = () => {
         <Route path="/create-lineup" element={<CreateLineup />} />
         <Route path="/create-lineup/attack" element={<AttackCreator />} />
         <Route path="/create-lineup/defense" element={<DefenseCreator />} />
-        <Route
-          path="/create-lineup/attack/:id"
-          element={<OperatorSelector />}
-        />
       </Routes>
     </>
   )

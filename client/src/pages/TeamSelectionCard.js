@@ -1,7 +1,7 @@
-const TeamSelectionCard = () => {
+const TeamSelectionCard = (props) => {
   return (
     <>
-      <div className="selection-card"></div>
+      <div className="selection-card" onClick={props.onClick}></div>
     </>
   )
 }
