@@ -127,9 +127,29 @@ transition: 300ms;
 
 }
 
+.equipment-options{
+  width: 150px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .equipment{
-  width: 50px;
+  width: 150px;
   height: 50px;
+  background-color: #2499ff;
+  transition: 300ms;
+}
+
+.equipment:hover{
+  height: 80px;
+  opacity: .8;
+}
+
+.ability{
+  width: 150px;
+  height: 200px;
   background-color: #2499ff;
 }
 

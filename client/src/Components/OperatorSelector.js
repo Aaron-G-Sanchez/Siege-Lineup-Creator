@@ -28,28 +28,30 @@ const OperatorSelector = (props) => {
       {selectedAttacker ? (
         // Shows the operators equipment
         <div className="equipment-grid">
-          <div className="primary">
+          <div className="equipment-options primary">
             {selectedAttacker.primary.map((primary, index) => (
               <div key={index} className="equipment primary-options">
                 {primary}
               </div>
             ))}
           </div>
-          <div className="secondary">
+          <div className="equipment-options secondary">
             {selectedAttacker.secondary.map((secondary, index) => (
               <div key={index} className="equipment secondary-options">
                 {secondary}
               </div>
             ))}
           </div>
-          <div className="utility">
+          <div className="equipment-options utility">
             {selectedAttacker.utility.map((utility, index) => (
               <div key={index} className="equipment utility-options">
                 {utility}
               </div>
             ))}
           </div>
-          <div className="ability">{selectedAttacker.ability}</div>
+          <div className="equipment-options ability">
+            {selectedAttacker.ability}
+          </div>
         </div>
       ) : (
         // Shows the operators to choose from
