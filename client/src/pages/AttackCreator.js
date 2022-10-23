@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import TeamSelectionCard from './TeamSelectionCard'
 import Nav from './Nav'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import TeamSelectionCard from './TeamSelectionCard'
 import OperatorSelector from '../components/OperatorSelector'
 
 const AttackCreator = () => {
   const [attackers, setAttackers] = useState([])
-  const [selectedAttacker, setSelectedAttacker] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
   const getAttackOps = async () => {
