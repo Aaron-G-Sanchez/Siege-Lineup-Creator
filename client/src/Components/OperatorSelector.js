@@ -18,7 +18,7 @@ const OperatorSelector = (props) => {
   }
 
   if (selectedAttacker) {
-    console.log(selectedAttacker.primary)
+    console.log(selectedAttacker.ability)
   } else {
     console.log('empty')
   }
@@ -26,14 +26,33 @@ const OperatorSelector = (props) => {
   return (
     <>
       {selectedAttacker ? (
-        <div className="operator-grid">
-          {selectedAttacker.primary.map((primary, index) => (
-            <div key={index} className="equipment">
-              {primary}
-            </div>
-          ))}
+        // Shows the operators equipment
+        <div className="equipment-grid">
+          <div className="primary">
+            {selectedAttacker.primary.map((primary, index) => (
+              <div key={index} className="equipment primary-options">
+                {primary}
+              </div>
+            ))}
+          </div>
+          <div className="secondary">
+            {selectedAttacker.secondary.map((secondary, index) => (
+              <div key={index} className="equipment secondary-options">
+                {secondary}
+              </div>
+            ))}
+          </div>
+          <div className="utility">
+            {selectedAttacker.utility.map((utility, index) => (
+              <div key={index} className="equipment utility-options">
+                {utility}
+              </div>
+            ))}
+          </div>
+          <div className="ability">{selectedAttacker.ability}</div>
         </div>
       ) : (
+        // Shows the operators to choose from
         <div className="operator-grid">
           {props.attackers.map((op) => (
             <div

@@ -116,3 +116,20 @@ transition: 300ms;
 .operator:hover {
   opacity: .7;
 }
+
+.equipment-grid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 450px;
+  background-color: grey;
+
+}
+
+.equipment{
+  width: 50px;
+  height: 50px;
+  background-color: #2499ff;
+}
+
