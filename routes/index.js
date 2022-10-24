@@ -18,6 +18,6 @@ router.get('/operators/defense/:id', controllers.findDefenseOpById)
 
 router.post('/operators/attack', controllers.addTeamMember)
 
-router.get('/teammembers', controllers.getTeamMember)
+router.get('/teamMembers', controllers.getTeamMember)
 
 module.exports = router
