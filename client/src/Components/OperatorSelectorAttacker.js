@@ -51,7 +51,6 @@ const OperatorSelectorAttacker = (props) => {
   const buttonClick = () => {
     saveOperator()
     props.handleClick()
-    // console.log(isClosed)
   }
 
   const getPrimary = (e) => {

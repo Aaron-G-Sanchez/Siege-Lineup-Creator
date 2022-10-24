@@ -62,11 +62,21 @@ const addTeamMember = async (req, res) => {
   }
 }
 
+const getTeamMember = async (req, res) => {
+  try {
+    const teamMember = await TeamMember.find()
+    return res.status(200).json({ teamMember })
+  } catch (err) {
+    return res.status(500).send(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
   findDefenseOps,
   findAttackOpById,
   findDefenseOpById,
-  addTeamMember
+  addTeamMember,
+  getTeamMember
 }
