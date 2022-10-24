@@ -29,26 +29,26 @@ const OperatorSelectorDefender = (props) => {
         <div className="equipment-grid">
           <div className="equipment-options primary">
             {selectedDefender.primary.map((primary, index) => (
-              <div key={index} className="equipment primary-options">
+              <div key={index} className="equipment def-options">
                 {primary}
               </div>
             ))}
           </div>
           <div className="equipment-options secondary">
             {selectedDefender.secondary.map((secondary, index) => (
-              <div key={index} className="equipment secondary-options">
+              <div key={index} className="equipment def-options">
                 {secondary}
               </div>
             ))}
           </div>
           <div className="equipment-options utility">
             {selectedDefender.utility.map((utility, index) => (
-              <div key={index} className="equipment utility-options">
+              <div key={index} className="equipment def-options">
                 {utility}
               </div>
             ))}
           </div>
-          <div className="equipment-options ability">
+          <div className="equipment-options ability def-options">
             {selectedDefender.ability}
           </div>
         </div>
@@ -58,7 +58,7 @@ const OperatorSelectorDefender = (props) => {
           {props.defenders.map((op) => (
             <div
               key={op._id}
-              className="operator"
+              className="operator def-op"
               onClick={() => getId(op._id)}
             >
               {op.name}

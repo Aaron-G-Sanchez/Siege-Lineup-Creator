@@ -110,12 +110,21 @@ transition: 300ms;
 .operator{
   width: 100px;
   height: 100px;
-  background-color: #2499ff;
+
 }
 
 .operator:hover {
   opacity: .7;
 }
+
+.atk-op{
+  background-color: #2499ff;
+}
+
+.def-op{
+  background-color: #d89c27;
+}
+
 
 .equipment-grid {
   display: flex;
@@ -138,7 +147,6 @@ transition: 300ms;
 .equipment{
   width: 150px;
   height: 50px;
-  background-color: #2499ff;
   transition: 300ms;
 }
 
@@ -147,9 +155,16 @@ transition: 300ms;
   opacity: .8;
 }
 
+.atk-options{
+  background-color: #2499ff;
+}
+
+.def-options{
+  background-color: #d89c27;
+}
+
 .ability{
   width: 150px;
   height: 200px;
-  background-color: #2499ff;
 }
 
