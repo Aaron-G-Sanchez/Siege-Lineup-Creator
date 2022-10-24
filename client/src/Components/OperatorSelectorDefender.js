@@ -9,17 +9,11 @@ const OperatorSelectorDefender = (props) => {
       let response = await axios.get(
         `http://localhost:3001/operators/defense/${id}`
       )
-      console.log(response)
+      // console.log(response)
       setSelectedDefender(response.data.defenseId)
     } catch (err) {
       console.log(err)
     }
-  }
-
-  if (selectedDefender) {
-    console.log(selectedDefender.ability)
-  } else {
-    console.log('empty')
   }
 
   return (

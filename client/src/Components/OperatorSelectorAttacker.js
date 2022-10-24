@@ -4,6 +4,22 @@ import { useState } from 'react'
 const OperatorSelectorAttacker = (props) => {
   const [selectedAttacker, setSelectedAttacker] = useState(null)
 
+  const [selectedAttackerName, setSelectedAttackerName] = useState(null)
+  const [selectedPrimary, setSelectedPrimary] = useState(null)
+  const [selectedSecondary, setSelectedSecondary] = useState(null)
+  const [selectedUtility, setSelectedUtility] = useState(null)
+  const [selectedAbility, setSelectedAbility] = useState(null)
+
+  // const [createdOperator, setCreatedOperator] = useState({})
+
+  let createdOp = {
+    name: selectedAttackerName,
+    primary: selectedPrimary,
+    secondary: selectedSecondary,
+    utility: selectedUtility,
+    ability: selectedAbility
+  }
+
   const getId = async (id) => {
     try {
       let response = await axios.get(
@@ -11,17 +27,23 @@ const OperatorSelectorAttacker = (props) => {
       )
       // console.log(response)
       setSelectedAttacker(response.data.attackerId)
+      setSelectedAttackerName(response.data.attackerId.name)
+      setSelectedAbility(response.data.attackerId.ability)
     } catch (err) {
       console.log(err)
     }
   }
 
-  if (selectedAttacker) {
-    console.log(selectedAttacker.ability)
-  } else {
-    console.log('empty')
+  const getPrimary = (e) => {
+    setSelectedPrimary(e.target.textContent)
   }
-
+  const getSecondary = (e) => {
+    setSelectedSecondary(e.target.textContent)
+  }
+  const getUtility = (e) => {
+    setSelectedUtility(e.target.textContent)
+  }
+  console.log(createdOp)
   return (
     <>
       {selectedAttacker ? (
@@ -29,21 +51,33 @@ const OperatorSelectorAttacker = (props) => {
         <div className="equipment-grid">
           <div className="equipment-options primary">
             {selectedAttacker.primary.map((primary, index) => (
-              <div key={index} className="equipment atk-options">
+              <div
+                key={index}
+                className="equipment atk-options"
+                onClick={getPrimary}
+              >
                 {primary}
               </div>
             ))}
           </div>
           <div className="equipment-options secondary">
             {selectedAttacker.secondary.map((secondary, index) => (
-              <div key={index} className="equipment atk-options">
+              <div
+                key={index}
+                className="equipment atk-options"
+                onClick={getSecondary}
+              >
                 {secondary}
               </div>
             ))}
           </div>
           <div className="equipment-options utility">
             {selectedAttacker.utility.map((utility, index) => (
-              <div key={index} className="equipment atk-options">
+              <div
+                key={index}
+                className="equipment atk-options"
+                onClick={getUtility}
+              >
                 {utility}
               </div>
             ))}
