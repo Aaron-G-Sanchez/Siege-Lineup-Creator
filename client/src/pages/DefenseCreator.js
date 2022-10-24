@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import TeamSelectionCard from './TeamSelectionCard'
 import Nav from './Nav'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import TeamSelectionCard from './TeamSelectionCard'
+import OperatorSelectorDefender from '../components/OperatorSelectorDefender'
 
 const DefenseCreator = () => {
   const [defenders, setDefenders] = useState([])
+  const [isClosed, setIsClosed] = useState(false)
 
   const getDefenseOps = async () => {
     try {
@@ -20,14 +22,29 @@ const DefenseCreator = () => {
   }, [])
   return (
     <>
-      <div>
-        <Nav />
-        <div className="team-selection-grid">
-          <TeamSelectionCard defenders={defenders} />
-          <TeamSelectionCard defenders={defenders} />
-          <TeamSelectionCard defenders={defenders} />
+      <Nav />
+
+      {isClosed ? (
+        <div className="selector-grid">
+          <OperatorSelectorDefender defenders={defenders} />
         </div>
-      </div>
+      ) : null}
+      {isClosed ? null : (
+        <div className="team-selection-grid">
+          <TeamSelectionCard
+            defenders={defenders}
+            onClick={() => setIsClosed(!isClosed)}
+          />
+          <TeamSelectionCard
+            defenders={defenders}
+            onClick={() => setIsClosed(!isClosed)}
+          />
+          <TeamSelectionCard
+            defenders={defenders}
+            onClick={() => setIsClosed(!isClosed)}
+          />
+        </div>
+      )}
     </>
   )
 }

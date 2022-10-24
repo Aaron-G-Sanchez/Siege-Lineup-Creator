@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { useState } from 'react'
 
-const OperatorSelector = (props) => {
+const OperatorSelectorAttacker = (props) => {
   const [selectedAttacker, setSelectedAttacker] = useState(null)
 
-  //STOPPED HERE. AXIOS CALL WORKS AND GRABS PROPER OP ID
   const getId = async (id) => {
     try {
       let response = await axios.get(
@@ -71,4 +70,4 @@ const OperatorSelector = (props) => {
   )
 }
 
-export default OperatorSelector
+export default OperatorSelectorAttacker

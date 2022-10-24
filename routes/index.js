@@ -14,4 +14,6 @@ router.get('/operators/defense', controllers.findDefenseOps)
 
 router.get('/operators/attack/:id', controllers.findAttackOpById)
 
+router.get('/operators/defense/:id', controllers.findDefenseOpById)
+
 module.exports = router

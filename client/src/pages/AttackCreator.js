@@ -2,7 +2,7 @@ import Nav from './Nav'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import TeamSelectionCard from './TeamSelectionCard'
-import OperatorSelector from '../components/OperatorSelector'
+import OperatorSelectorAttacker from '../components/OperatorSelectorAttacker'
 
 const AttackCreator = () => {
   const [attackers, setAttackers] = useState([])
@@ -27,7 +27,7 @@ const AttackCreator = () => {
 
       {isClosed ? (
         <div className="selector-grid">
-          <OperatorSelector attackers={attackers} />
+          <OperatorSelectorAttacker attackers={attackers} />
         </div>
       ) : null}
       {isClosed ? null : (
