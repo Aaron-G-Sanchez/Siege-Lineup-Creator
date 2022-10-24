@@ -21,29 +21,27 @@ const AttackCreator = () => {
     getAttackOps()
   }, [])
 
+  const handleClick = () => {
+    setIsClosed(!isClosed)
+  }
+
   return (
     <>
       <Nav />
 
       {isClosed ? (
         <div className="selector-grid">
-          <OperatorSelectorAttacker attackers={attackers} />
+          <OperatorSelectorAttacker
+            attackers={attackers}
+            handleClick={handleClick}
+          />
         </div>
       ) : null}
       {isClosed ? null : (
         <div className="team-selection-grid">
-          <TeamSelectionCard
-            attackers={attackers}
-            onClick={() => setIsClosed(!isClosed)}
-          />
-          <TeamSelectionCard
-            attackers={attackers}
-            onClick={() => setIsClosed(!isClosed)}
-          />
-          <TeamSelectionCard
-            attackers={attackers}
-            onClick={() => setIsClosed(!isClosed)}
-          />
+          <TeamSelectionCard attackers={attackers} onClick={handleClick} />
+          <TeamSelectionCard attackers={attackers} onClick={handleClick} />
+          <TeamSelectionCard attackers={attackers} onClick={handleClick} />
         </div>
       )}
     </>

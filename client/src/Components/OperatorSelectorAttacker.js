@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useState } from 'react'
-import SaveOperator from './SaveOperator'
 
 const OperatorSelectorAttacker = (props) => {
   const [selectedAttacker, setSelectedAttacker] = useState(null)
@@ -11,8 +10,7 @@ const OperatorSelectorAttacker = (props) => {
   const [selectedUtility, setSelectedUtility] = useState(null)
   const [selectedAbility, setSelectedAbility] = useState(null)
 
-  // const [createdOperator, setCreatedOperator] = useState({})
-
+  // Curently just a place holder so I can see the op getting filled out. DELETE WHEN DONE
   let createdOp = {
     name: selectedAttackerName,
     primary: selectedPrimary,
@@ -35,6 +33,7 @@ const OperatorSelectorAttacker = (props) => {
     }
   }
 
+  // Saves created operator to database (TRY INPUTING CREATED OP INTO THE POST FIELS AND AN EXERIMENT)
   const saveOperator = async () => {
     try {
       axios.post('http://localhost:3001/operators/attack', {
@@ -49,6 +48,12 @@ const OperatorSelectorAttacker = (props) => {
     }
   }
 
+  const buttonClick = () => {
+    saveOperator()
+    props.handleClick()
+    // console.log(isClosed)
+  }
+
   const getPrimary = (e) => {
     setSelectedPrimary(e.target.textContent)
   }
@@ -58,6 +63,8 @@ const OperatorSelectorAttacker = (props) => {
   const getUtility = (e) => {
     setSelectedUtility(e.target.textContent)
   }
+
+  //Console.logs for testing?
   console.log(createdOp)
 
   return (
@@ -103,7 +110,7 @@ const OperatorSelectorAttacker = (props) => {
           </div>
           {/* Saves the operator after they select the utility they want to use */}
           {createdOp.utility ? (
-            <button onClick={() => saveOperator()}>Save Operator</button>
+            <button onClick={buttonClick}>Save Operator</button>
           ) : null}
         </div>
       ) : (
