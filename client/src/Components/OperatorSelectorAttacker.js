@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import SaveOperator from './SaveOperator'
 
 const OperatorSelectorAttacker = (props) => {
   const [selectedAttacker, setSelectedAttacker] = useState(null)
@@ -34,6 +35,20 @@ const OperatorSelectorAttacker = (props) => {
     }
   }
 
+  const saveOperator = async () => {
+    try {
+      axios.post('http://localhost:3001/operators/attack', {
+        name: selectedAttackerName,
+        primary: selectedPrimary,
+        secondary: selectedSecondary,
+        utility: selectedUtility,
+        ability: selectedAbility
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   const getPrimary = (e) => {
     setSelectedPrimary(e.target.textContent)
   }
@@ -44,6 +59,7 @@ const OperatorSelectorAttacker = (props) => {
     setSelectedUtility(e.target.textContent)
   }
   console.log(createdOp)
+
   return (
     <>
       {selectedAttacker ? (
@@ -85,6 +101,10 @@ const OperatorSelectorAttacker = (props) => {
           <div className="attack-options ability atk-options">
             {selectedAttacker.ability}
           </div>
+          {/* Saves the operator after they select the utility they want to use */}
+          {createdOp.utility ? (
+            <button onClick={() => saveOperator()}>Save Operator</button>
+          ) : null}
         </div>
       ) : (
         // Shows the operators to choose from
