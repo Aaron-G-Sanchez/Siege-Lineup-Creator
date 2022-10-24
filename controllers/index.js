@@ -1,4 +1,5 @@
 const { Operator } = require('../models')
+const { TeamMember } = require('../models')
 
 const findAllOperators = async (req, res) => {
   try {
@@ -51,10 +52,21 @@ const findDefenseOpById = async (req, res) => {
   }
 }
 
+const addTeamMember = async (req, res) => {
+  try {
+    const op = await new TeamMember(req.body)
+    await op.save()
+    return res.status(201).json({ op })
+  } catch (err) {
+    return res.status(500).json(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
   findDefenseOps,
   findAttackOpById,
-  findDefenseOpById
+  findDefenseOpById,
+  addTeamMember
 }
