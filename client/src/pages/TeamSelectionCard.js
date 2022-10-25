@@ -1,5 +1,4 @@
 import DeleteTeamMember from '../components/DeleteTeamMember'
-import axios from 'axios'
 
 const TeamSelectionCard = (props) => {
   return (
