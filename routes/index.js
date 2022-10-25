@@ -20,4 +20,6 @@ router.post('/operators/opSave', controllers.addTeamMember)
 
 router.get('/teamMembers', controllers.getTeamMember)
 
+router.delete('/teamMembers/delete/:id', controllers.deleteTeamMemberById)
+
 module.exports = router

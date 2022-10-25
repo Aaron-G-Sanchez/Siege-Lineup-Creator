@@ -45,7 +45,6 @@ const AttackCreator = () => {
   return (
     <>
       <Nav />
-
       {isClosed ? (
         <div className="selector-grid">
           <OperatorSelectorAttacker
@@ -53,8 +52,7 @@ const AttackCreator = () => {
             handleClick={handleClick}
           />
         </div>
-      ) : null}
-      {isClosed ? null : (
+      ) : (
         <div className="team-selection-grid">
           <TeamSelectionCard
             attackers={attackers}

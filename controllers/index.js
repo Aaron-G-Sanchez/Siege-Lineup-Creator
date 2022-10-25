@@ -71,6 +71,18 @@ const getTeamMember = async (req, res) => {
   }
 }
 
+const deleteTeamMemberById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const teamMemberId = await TeamMember.findByIdAndDelete(id)
+    if (teamMemberId) {
+      return res.status(200).send('TeamMember was deleted')
+    }
+  } catch (err) {
+    return res.status(500).json(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
@@ -78,5 +90,6 @@ module.exports = {
   findAttackOpById,
   findDefenseOpById,
   addTeamMember,
-  getTeamMember
+  getTeamMember,
+  deleteTeamMemberById
 }
