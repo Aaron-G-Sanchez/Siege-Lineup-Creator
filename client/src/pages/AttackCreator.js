@@ -36,9 +36,11 @@ const AttackCreator = () => {
   }
 
   useEffect(() => {
-    getCreatedOperators()
     getAttackOps()
+    getCreatedOperators()
   }, [isClosed, !isClosed])
+
+  console.log(isClosed)
 
   return (
     <>

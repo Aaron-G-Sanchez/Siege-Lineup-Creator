@@ -34,7 +34,7 @@ const OperatorSelectorDefender = (props) => {
 
   const saveOperator = async () => {
     try {
-      axios.post('http://localhost:3001/operators/opSave', {
+      await axios.post('http://localhost:3001/operators/opSave', {
         name: selectedDefenderName,
         primary: selectedPrimary,
         secondary: selectedSecondary,
