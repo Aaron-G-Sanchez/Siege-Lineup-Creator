@@ -57,7 +57,7 @@ const OperatorSelectorAttacker = (props) => {
     setSelectedUtility(e.target.textContent)
   }
 
-  //Console.logs for testing?
+  //Console.logs for testing
   console.log(createdOp)
 
   return (

@@ -33,6 +33,17 @@ const AttackCreator = () => {
     }
   }
 
+  const saveTeam = async () => {
+    try {
+      await axios.post('http://localhost:3001/saveTeam', {
+        teamName: teamName,
+        operators: createdTeamMembers
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
     getAttackOps()
     getCreatedOperators()
@@ -49,6 +60,7 @@ const AttackCreator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    saveTeam()
     setTeamName('')
   }
 
