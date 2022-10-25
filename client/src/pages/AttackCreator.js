@@ -40,7 +40,6 @@ const AttackCreator = () => {
     getAttackOps()
   }, [isClosed, !isClosed])
 
-  console.log(isClosed)
   return (
     <>
       <Nav />

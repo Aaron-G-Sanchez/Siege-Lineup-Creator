@@ -16,7 +16,7 @@ router.get('/operators/attack/:id', controllers.findAttackOpById)
 
 router.get('/operators/defense/:id', controllers.findDefenseOpById)
 
-router.post('/operators/attack', controllers.addTeamMember)
+router.post('/operators/opSave', controllers.addTeamMember)
 
 router.get('/teamMembers', controllers.getTeamMember)
 
