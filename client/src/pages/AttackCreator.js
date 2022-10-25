@@ -64,7 +64,7 @@ const AttackCreator = () => {
   } else {
     form = null
   }
-
+  console.log(createdTeamMembers)
   return (
     <>
       <Nav />

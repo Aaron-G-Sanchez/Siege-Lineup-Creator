@@ -1,5 +1,6 @@
 const { Operator } = require('../models')
 const { TeamMember } = require('../models')
+const { Team } = require('../models')
 
 const findAllOperators = async (req, res) => {
   try {
@@ -83,6 +84,16 @@ const deleteTeamMemberById = async (req, res) => {
   }
 }
 
+const saveTeam = async (req, res) => {
+  try {
+    const team = await new Team(req.body)
+    await team.save()
+    return res.status(201).json({ team })
+  } catch (err) {
+    return res.status(500).send(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
@@ -91,5 +102,6 @@ module.exports = {
   findDefenseOpById,
   addTeamMember,
   getTeamMember,
-  deleteTeamMemberById
+  deleteTeamMemberById,
+  saveTeam
 }

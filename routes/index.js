@@ -22,4 +22,6 @@ router.get('/teamMembers', controllers.getTeamMember)
 
 router.delete('/teamMembers/delete/:id', controllers.deleteTeamMemberById)
 
+router.post('/saveTeam', controllers.saveTeam)
+
 module.exports = router
