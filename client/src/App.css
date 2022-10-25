@@ -16,6 +16,17 @@ background-color: lightgrey;
 color: white;
 }
 
+button {
+  border: none;
+  width: 30px;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: grey;
+  width: 50px;
+}
+
 .grid-item{
 display: flex;
 flex-direction: column;
@@ -85,10 +96,12 @@ transition: 300ms;
   width: 350px;
   height: 400px;
   background-color: grey;
+  transition: .3s;
 }
 
 .selection-card:hover {
   opacity: .8;
+  scale: 1.01;
 
 }
 
@@ -168,5 +181,7 @@ transition: 300ms;
   height: 200px;
 }
 
-
+.remove-op-button {
+  z-index: 69;
+}
 
