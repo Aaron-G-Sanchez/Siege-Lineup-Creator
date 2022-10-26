@@ -3,12 +3,16 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import TeamSelectionCard from './TeamSelectionCard'
 import OperatorSelectorDefender from '../components/OperatorSelectorDefender'
+import SaveTeam from '../components/SaveTeam'
 
 const DefenseCreator = () => {
+  // console.log('RELOADED')
   const [defenders, setDefenders] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
   const [createdTeamMembers, setCreatedTeamMembers] = useState([])
+
+  const [teamName, setTeamName] = useState('')
 
   const getDefenseOps = async () => {
     try {
@@ -29,9 +33,16 @@ const DefenseCreator = () => {
     }
   }
 
-  const handleClick = () => {
-    setIsClosed(!isClosed)
-    getCreatedOperators()
+  const saveTeam = async () => {
+    try {
+      await axios.post('http://localhost:3001/saveTeam', {
+        teamName: teamName,
+        operators: createdTeamMembers
+      })
+      setTeamName('')
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   useEffect(() => {
@@ -39,10 +50,36 @@ const DefenseCreator = () => {
     getDefenseOps()
   }, [isClosed, !isClosed])
 
+  const handleClick = () => {
+    setIsClosed(!isClosed)
+    getCreatedOperators()
+  }
+
+  const handleChange = (e) => {
+    setTeamName(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    saveTeam()
+  }
+
+  let form
+  if (createdTeamMembers.length === 3) {
+    form = (
+      <SaveTeam
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        teamName={teamName}
+      />
+    )
+  } else {
+    form = null
+  }
+
   return (
     <>
       <Nav />
-
       {isClosed ? (
         <div className="selector-grid">
           <OperatorSelectorDefender
@@ -50,25 +87,27 @@ const DefenseCreator = () => {
             handleClick={handleClick}
           />
         </div>
-      ) : null}
-      {isClosed ? null : (
-        <div className="team-selection-grid">
-          <TeamSelectionCard
-            defenders={defenders}
-            onClick={handleClick}
-            op={createdTeamMembers[0]}
-          />
-          <TeamSelectionCard
-            defenders={defenders}
-            onClick={handleClick}
-            op={createdTeamMembers[1]}
-          />
-          <TeamSelectionCard
-            defenders={defenders}
-            onClick={handleClick}
-            op={createdTeamMembers[2]}
-          />
-        </div>
+      ) : (
+        <>
+          <div className="team-selection-grid">
+            <TeamSelectionCard
+              defenders={defenders}
+              onClick={handleClick}
+              op={createdTeamMembers[0]}
+            />
+            <TeamSelectionCard
+              defenders={defenders}
+              onClick={handleClick}
+              op={createdTeamMembers[1]}
+            />
+            <TeamSelectionCard
+              defenders={defenders}
+              onClick={handleClick}
+              op={createdTeamMembers[2]}
+            />
+          </div>
+          {form}
+        </>
       )}
     </>
   )

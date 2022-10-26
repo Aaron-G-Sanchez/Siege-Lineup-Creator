@@ -6,6 +6,7 @@ import OperatorSelectorAttacker from '../components/OperatorSelectorAttacker'
 import SaveTeam from '../components/SaveTeam'
 
 const AttackCreator = () => {
+  // console.log('RELOADED')
   const [attackers, setAttackers] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
@@ -39,14 +40,15 @@ const AttackCreator = () => {
         teamName: teamName,
         operators: createdTeamMembers
       })
+      setTeamName('')
     } catch (err) {
       console.log(err)
     }
   }
 
   useEffect(() => {
-    getAttackOps()
     getCreatedOperators()
+    getAttackOps()
   }, [isClosed, !isClosed])
 
   const handleClick = () => {
@@ -61,7 +63,6 @@ const AttackCreator = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     saveTeam()
-    setTeamName('')
   }
 
   let form
@@ -76,7 +77,7 @@ const AttackCreator = () => {
   } else {
     form = null
   }
-  console.log(createdTeamMembers)
+
   return (
     <>
       <Nav />

@@ -23,7 +23,7 @@ const OperatorSelectorDefender = (props) => {
       let response = await axios.get(
         `http://localhost:3001/operators/defense/${id}`
       )
-      console.log(response.data.defenseId.name)
+      // console.log(response.data.defenseId.name)
       setSelectedDefender(response.data.defenseId)
       setSelectedDefenderName(response.data.defenseId.name)
       setSelectedAbility(response.data.defenseId.ability)
@@ -34,13 +34,7 @@ const OperatorSelectorDefender = (props) => {
 
   const saveOperator = async () => {
     try {
-      await axios.post('http://localhost:3001/operators/opSave', {
-        name: selectedDefenderName,
-        primary: selectedPrimary,
-        secondary: selectedSecondary,
-        utility: selectedUtility,
-        ability: selectedAbility
-      })
+      await axios.post('http://localhost:3001/operators/opSave', createdOp)
     } catch (err) {
       console.log(err)
     }

@@ -10,7 +10,6 @@ const OperatorSelectorAttacker = (props) => {
   const [selectedUtility, setSelectedUtility] = useState(null)
   const [selectedAbility, setSelectedAbility] = useState(null)
 
-  // Curently just a place holder so I can see the op getting filled out. DELETE WHEN DONE
   let createdOp = {
     name: selectedAttackerName,
     primary: selectedPrimary,
