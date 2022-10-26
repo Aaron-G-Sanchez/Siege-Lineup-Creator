@@ -55,7 +55,6 @@ const AttackCreator = () => {
     setIsClosed(!isClosed)
     getCreatedOperators()
   }
-
   const handleChange = (e) => {
     setTeamName(e.target.value)
   }
@@ -66,7 +65,8 @@ const AttackCreator = () => {
   }
 
   let form
-  if (createdTeamMembers.length === 3) {
+
+  if (createdTeamMembers.length === 5) {
     form = (
       <SaveTeam
         handleChange={handleChange}
@@ -105,6 +105,16 @@ const AttackCreator = () => {
               attackers={attackers}
               onClick={handleClick}
               op={createdTeamMembers[2]}
+            />
+            <TeamSelectionCard
+              attackers={attackers}
+              onClick={handleClick}
+              op={createdTeamMembers[3]}
+            />
+            <TeamSelectionCard
+              attackers={attackers}
+              onClick={handleClick}
+              op={createdTeamMembers[4]}
             />
           </div>
           {form}

@@ -65,7 +65,7 @@ const DefenseCreator = () => {
   }
 
   let form
-  if (createdTeamMembers.length === 3) {
+  if (createdTeamMembers.length === 5) {
     form = (
       <SaveTeam
         handleChange={handleChange}
@@ -104,6 +104,16 @@ const DefenseCreator = () => {
               defenders={defenders}
               onClick={handleClick}
               op={createdTeamMembers[2]}
+            />
+            <TeamSelectionCard
+              defenders={defenders}
+              onClick={handleClick}
+              op={createdTeamMembers[3]}
+            />
+            <TeamSelectionCard
+              defenders={defenders}
+              onClick={handleClick}
+              op={createdTeamMembers[4]}
             />
           </div>
           {form}
