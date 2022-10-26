@@ -1,13 +1,18 @@
 const ViewOperators = (props) => {
   return (
     <>
-      <div>
+      <section className="main-operator-grid">
         {props.operators.map((operator) => (
-          <div key={operator._id}>
-            <h2>{operator.name}</h2>
+          <div className="operator-card" key={operator._id}>
+            <img
+              className="op-portrait"
+              src={operator.image}
+              alt="operator-portrait"
+            />
+            <h2 className="op-card-name">{operator.name}</h2>
           </div>
         ))}
-      </div>
+      </section>
     </>
   )
 }

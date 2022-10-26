@@ -8,6 +8,7 @@ const Operator = new Schema(
     utility: [{ type: String, require: true }],
     ability: { type: String, require: true },
     team: { type: String, require: true },
+    icon: { type: String, require: true },
     image: { type: String, require: true }
   },
   { timestamps: true }

@@ -50,6 +50,40 @@ height: 100vh;
 opacity: 1;
 }
 
+.main-operator-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 0 auto;
+  gap: 30px
+}
+
+.operator-card{
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+}
+
+.operator-card:hover {
+  background-color: rgba(229, 230, 228, .5);
+  scale: 1.1;
+}
+
+.op-portrait{
+  height: 300px;
+}
+
+.op-card-name{
+  background-color: #BAC1B8;
+  width: 250px;
+  margin: 0
+}
+
 .create-lineup-main {
   display: flex;
   flex-direction: column;
@@ -75,7 +109,7 @@ transition: .3s;
 
 .attack:hover{
   opacity: .8;
-  width: 350px;
+  scale: 1.1;
 }
 
 .defense {
@@ -87,7 +121,7 @@ transition: .3s;
 
 .defense:hover {
   opacity: .8;
-  width: 350px;
+  scale: 1.1;
 }
 
 .team-selection-grid{
@@ -95,19 +129,30 @@ transition: .3s;
   justify-content: space-evenly;
   align-items: center;
   height: 90vh;
-
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100vw;
+  margin: 0 auto */
 }
+
+/* .selection-options{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+} */
 
 .selection-card{
   width: 350px;
   height: 400px;
   background-color: grey;
+  opacity: .5;
   transition: .3s;
 }
 
 .selection-card:hover {
-  opacity: .8;
-  scale: 1.01;
+  opacity: 1;
+  scale: 1.1;
 
 }
 

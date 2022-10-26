@@ -110,7 +110,7 @@ const OperatorSelectorDefender = (props) => {
               className="operator def-op"
               onClick={() => getId(op._id)}
             >
-              <img src={op.image} alt="operator-icon" />
+              <img src={op.icon} alt="operator-icon" />
               <p className="op-name">{op.name}</p>
             </div>
           ))}
