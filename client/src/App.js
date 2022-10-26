@@ -10,6 +10,7 @@ import DefenseCreator from './pages/DefenseCreator'
 
 const App = () => {
   const [operators, setOperators] = useState([])
+  const [createdTeamMembers, setCreatedTeamMembers] = useState([])
 
   const getOperators = async () => {
     try {
@@ -33,7 +34,15 @@ const App = () => {
           element={<ViewOperators operators={operators} />}
         />
         <Route path="/create-lineup" element={<CreateLineup />} />
-        <Route path="/create-lineup/attack" element={<AttackCreator />} />
+        <Route
+          path="/create-lineup/attack"
+          element={
+            <AttackCreator
+              createdTeamMembers={createdTeamMembers}
+              setCreatedTeamMembers={setCreatedTeamMembers}
+            />
+          }
+        />
         <Route path="/create-lineup/defense" element={<DefenseCreator />} />
       </Routes>
     </>

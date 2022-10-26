@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react'
 import TeamSelectionCard from './TeamSelectionCard'
 import OperatorSelectorAttacker from '../components/OperatorSelectorAttacker'
 import SaveTeam from '../components/SaveTeam'
+import { useNavigate } from 'react-router-dom'
 
-const AttackCreator = () => {
-  // console.log('RELOADED')
+const AttackCreator = (props) => {
+  let navigate = useNavigate()
+  console.log('rerendered')
   const [attackers, setAttackers] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
-  const [createdTeamMembers, setCreatedTeamMembers] = useState([])
+  // const [createdTeamMembers, setCreatedTeamMembers] = useState([])
 
   const [teamName, setTeamName] = useState('')
 
@@ -18,7 +20,6 @@ const AttackCreator = () => {
     try {
       let response = await axios.get('http://localhost:3001/operators/attack')
       setAttackers(response.data.attackers)
-      // console.log(response)
     } catch (err) {
       console.log(err)
     }
@@ -27,8 +28,8 @@ const AttackCreator = () => {
   const getCreatedOperators = async () => {
     try {
       let response = await axios.get('http://localhost:3001/teamMembers')
-      // console.log(response.data.teamMember)
-      setCreatedTeamMembers(response.data.teamMember)
+
+      props.setCreatedTeamMembers(response.data.teamMember)
     } catch (err) {
       console.log(err)
     }
@@ -38,9 +39,8 @@ const AttackCreator = () => {
     try {
       await axios.post('http://localhost:3001/saveTeam', {
         teamName: teamName,
-        operators: createdTeamMembers
+        operators: props.createdTeamMembers
       })
-      setTeamName('')
     } catch (err) {
       console.log(err)
     }
@@ -62,11 +62,14 @@ const AttackCreator = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     saveTeam()
+    setTeamName('')
+    navigate('/')
   }
 
+  // renders save team form when the team member length is at 5
   let form
 
-  if (createdTeamMembers.length === 5) {
+  if (props.createdTeamMembers.length === 5) {
     form = (
       <SaveTeam
         handleChange={handleChange}
@@ -94,27 +97,27 @@ const AttackCreator = () => {
             <TeamSelectionCard
               attackers={attackers}
               onClick={handleClick}
-              op={createdTeamMembers[0]}
+              op={props.createdTeamMembers[0]}
             />
             <TeamSelectionCard
               attackers={attackers}
               onClick={handleClick}
-              op={createdTeamMembers[1]}
+              op={props.createdTeamMembers[1]}
             />
             <TeamSelectionCard
               attackers={attackers}
               onClick={handleClick}
-              op={createdTeamMembers[2]}
+              op={props.createdTeamMembers[2]}
             />
             <TeamSelectionCard
               attackers={attackers}
               onClick={handleClick}
-              op={createdTeamMembers[3]}
+              op={props.createdTeamMembers[3]}
             />
             <TeamSelectionCard
               attackers={attackers}
               onClick={handleClick}
-              op={createdTeamMembers[4]}
+              op={props.createdTeamMembers[4]}
             />
           </div>
           {form}

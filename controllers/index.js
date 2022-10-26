@@ -88,16 +88,12 @@ const saveTeam = async (req, res) => {
   try {
     const team = await new Team(req.body)
     await team.save()
-    // await TeamMember.collection.drop()
+    await TeamMember.collection.drop()
     return res.status(201).json({ team })
   } catch (err) {
     return res.status(500).send(err.message)
   }
 }
-
-// const dropTeamMembers = async() => {
-
-// }
 
 module.exports = {
   findAllOperators,

@@ -35,7 +35,13 @@ const OperatorSelectorAttacker = (props) => {
   // Saves created operator to database (TRY INPUTING CREATED OP INTO THE POST FIELS AND AN EXERIMENT)
   const saveOperator = async () => {
     try {
-      await axios.post('http://localhost:3001/operators/opSave', createdOp)
+      await axios.post('http://localhost:3001/operators/opSave', {
+        name: selectedAttackerName,
+        primary: selectedPrimary,
+        secondary: selectedSecondary,
+        utility: selectedUtility,
+        ability: selectedAbility
+      })
     } catch (err) {
       console.log(err)
     }
@@ -57,7 +63,6 @@ const OperatorSelectorAttacker = (props) => {
   }
 
   //Console.logs for testing
-  console.log(createdOp)
 
   return (
     <>
