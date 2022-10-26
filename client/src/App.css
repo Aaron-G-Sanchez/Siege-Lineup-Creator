@@ -31,6 +31,10 @@ input{
   height: 25px;
 }
 
+p{
+  margin: 0;
+}
+
 .grid-item{
 display: flex;
 flex-direction: column;
@@ -115,29 +119,51 @@ transition: .3s;
 
 .operator-grid {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100vw;
-  height: 450px;
+  height: 80vh;
   background-color: grey;
 }
 
 .operator{
-  width: 100px;
-  height: 100px;
-
+  margin: 0 10px;
+  width: 120px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.operator:hover {
-  opacity: .7;
+.op-name{
+  background: black;
+  color: white;
+  width: 120px;
+}
+
+.operator > img {
+  width: 100px;
+  height: 100px;
 }
 
 .atk-op{
-  background-color: #2499ff;
+  background-color: rgba(255, 255, 255, .3);
+  transition: .3s;
+}
+
+.atk-op:hover{
+  background-color: rgba(36, 153, 255, 1);
 }
 
 .def-op{
-  background-color: #d89c27;
+  background-color: rgba(255, 255, 255, .3);
+  transition: .3s;
+}
+
+.def-op:hover{
+  background-color: rgba(216, 156, 39, 1);
 }
 
 
