@@ -9,6 +9,8 @@ const OperatorSelectorDefender = (props) => {
   const [selectedSecondary, setSelectedSecondary] = useState(null)
   const [selectedUtility, setSelectedUtility] = useState(null)
   const [selectedAbility, setSelectedAbility] = useState(null)
+  const [selectedIcon, setSelectedIcon] = useState(null)
+  const [selectedImage, setSelectedImage] = useState(null)
 
   let createdOp = {
     name: selectedDefenderName,
@@ -27,6 +29,8 @@ const OperatorSelectorDefender = (props) => {
       setSelectedDefender(response.data.defenseId)
       setSelectedDefenderName(response.data.defenseId.name)
       setSelectedAbility(response.data.defenseId.ability)
+      setSelectedIcon(response.data.defenseId.icon)
+      setSelectedImage(response.data.defenseId.image)
     } catch (err) {
       console.log(err)
     }
@@ -34,7 +38,15 @@ const OperatorSelectorDefender = (props) => {
 
   const saveOperator = async () => {
     try {
-      await axios.post('http://localhost:3001/operators/opSave', createdOp)
+      await axios.post('http://localhost:3001/operators/opSave', {
+        name: selectedDefenderName,
+        primary: selectedPrimary,
+        secondary: selectedSecondary,
+        utility: selectedUtility,
+        ability: selectedAbility,
+        icon: selectedIcon,
+        image: selectedImage
+      })
     } catch (err) {
       console.log(err)
     }
