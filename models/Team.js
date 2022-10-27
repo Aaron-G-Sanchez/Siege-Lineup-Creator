@@ -9,7 +9,9 @@ const FinalTeam = new Schema(
         primary: { type: String, require: true },
         secondary: { type: String, require: true },
         utility: { type: String, require: true },
-        abillity: { type: String, require: true }
+        abillity: { type: String, require: true },
+        icon: { type: String, require: true },
+        image: { type: String, require: true }
       }
     ]
   },

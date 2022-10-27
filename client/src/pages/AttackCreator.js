@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AttackCreator = (props) => {
   let navigate = useNavigate()
-  console.log('rerendered')
+
   const [attackers, setAttackers] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 

@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react'
 import TeamSelectionCard from './TeamSelectionCard'
 import OperatorSelectorDefender from '../components/OperatorSelectorDefender'
 import SaveTeam from '../components/SaveTeam'
-
+import { useNavigate } from 'react-router-dom'
 const DefenseCreator = () => {
-  // console.log('RELOADED')
+  let navigate = useNavigate()
   const [defenders, setDefenders] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
@@ -39,7 +39,6 @@ const DefenseCreator = () => {
         teamName: teamName,
         operators: createdTeamMembers
       })
-      setTeamName('')
     } catch (err) {
       console.log(err)
     }
@@ -62,6 +61,8 @@ const DefenseCreator = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     saveTeam()
+    setTeamName('')
+    navigate('/')
   }
 
   let form
