@@ -7,10 +7,12 @@ import ViewOperators from './components/ViewOperators'
 import CreateLineup from './pages/CreateLineup'
 import AttackCreator from './pages/AttackCreator'
 import DefenseCreator from './pages/DefenseCreator'
+import ViewLineups from './pages/ViewLineups'
 
 const App = () => {
   const [operators, setOperators] = useState([])
   const [createdTeamMembers, setCreatedTeamMembers] = useState([])
+  const [createdTeams, setCreatedTeams] = useState([])
 
   const getOperators = async () => {
     try {
@@ -44,6 +46,15 @@ const App = () => {
           }
         />
         <Route path="/create-lineup/defense" element={<DefenseCreator />} />
+        <Route
+          path="/view-lineups"
+          element={
+            <ViewLineups
+              createdTeams={createdTeams}
+              setCreatedTeams={setCreatedTeams}
+            />
+          }
+        />
       </Routes>
     </>
   )

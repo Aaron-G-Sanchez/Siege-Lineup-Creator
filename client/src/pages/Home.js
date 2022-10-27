@@ -13,7 +13,7 @@ const Home = (props) => {
         <Link to="/create-lineup">
           <CreateLineupNav />
         </Link>
-        <Link to="/view-teams">
+        <Link to="/view-lineups">
           <ViewTeamsNav />
         </Link>
       </main>

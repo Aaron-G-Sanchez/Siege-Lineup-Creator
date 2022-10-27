@@ -41,8 +41,8 @@ flex-direction: column;
 justify-content: center;
 background-color: rgba(173, 174, 173, .4);
 border: black 1px solid;
-/* opacity: .4; */
 height: 100vh;
+transition: .3s;
 }
 
 
@@ -272,3 +272,6 @@ form > button:hover {
   width: 110px;
 }
 
+.team-display {
+  height: 100vh;
+}
