@@ -20,11 +20,25 @@ const ViewLineups = (props) => {
   return (
     <>
       <Nav />
-      <div className="team-display">
+      <section className="team-display">
         {props.createdTeams.map((team) => (
-          <section key={team._id}>{team.teamName}</section>
+          <div className="team-card" key={team._id}>
+            <p className="team-name">{team.teamName}</p>
+            <div className="team-wrapper">
+              {team.operators.map((op) => (
+                <div className="op-display">
+                  <p>{op.name}</p>
+                  <img
+                    className="team-portrait"
+                    src={op.image}
+                    atl="operator-portrait"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         ))}
-      </div>
+      </section>
     </>
   )
 }
