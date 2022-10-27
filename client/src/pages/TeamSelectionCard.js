@@ -8,7 +8,8 @@ const TeamSelectionCard = (props) => {
           {props.op ? (
             <div className="created-op-info">
               <h2>{props.op.name}</h2>
-              <p>{props.op._id}</p>
+              {/* <p>{props.op._id}</p> */}
+              <img className="created-op-icon" src={props.op.image} />
             </div>
           ) : null}
         </div>

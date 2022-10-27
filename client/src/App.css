@@ -39,29 +39,28 @@ p{
 display: flex;
 flex-direction: column;
 justify-content: center;
-background-color: lightgray;
+background-color: rgba(173, 174, 173, .4);
 border: black 1px solid;
-opacity: .7;
+/* opacity: .4; */
 height: 100vh;
 }
 
 
 .grid-item:hover {
-opacity: 1;
-}
+background-color: rgba(173, 174, 173, .8)}
 
 .main-operator-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
-  gap: 30px
+  gap: 15px
 }
 
 .operator-card{
-  width: 250px;
-  height: 350px;
+  width: 160px;
+  /* height: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,12 +74,12 @@ opacity: 1;
 }
 
 .op-portrait{
-  height: 300px;
+  width: 160px;
 }
 
 .op-card-name{
-  background-color: #BAC1B8;
-  width: 250px;
+  background-color: #adaead;
+  width: 160px;
   margin: 0
 }
 
@@ -154,7 +153,10 @@ transition: .3s;
 .selection-card:hover {
   opacity: 1;
   scale: 1.1;
+}
 
+.created-op-icon {
+  height: 300px;
 }
 
 .selector-grid{

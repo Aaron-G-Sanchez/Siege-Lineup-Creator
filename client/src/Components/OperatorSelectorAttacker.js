@@ -9,13 +9,16 @@ const OperatorSelectorAttacker = (props) => {
   const [selectedSecondary, setSelectedSecondary] = useState(null)
   const [selectedUtility, setSelectedUtility] = useState(null)
   const [selectedAbility, setSelectedAbility] = useState(null)
+  const [selectedIcon, setSelectedIcon] = useState(null)
+  const [selectedImage, setSelectedImage] = useState(null)
 
   let createdOp = {
     name: selectedAttackerName,
     primary: selectedPrimary,
     secondary: selectedSecondary,
     utility: selectedUtility,
-    ability: selectedAbility
+    ability: selectedAbility,
+    icon: selectedIcon
   }
 
   const getId = async (id) => {
@@ -23,10 +26,12 @@ const OperatorSelectorAttacker = (props) => {
       let response = await axios.get(
         `http://localhost:3001/operators/attack/${id}`
       )
-      // console.log(response)
+      console.log(response)
       setSelectedAttacker(response.data.attackerId)
       setSelectedAttackerName(response.data.attackerId.name)
       setSelectedAbility(response.data.attackerId.ability)
+      setSelectedIcon(response.data.attackerId.icon)
+      setSelectedImage(response.data.attackerId.image)
     } catch (err) {
       console.log(err)
     }
@@ -40,7 +45,9 @@ const OperatorSelectorAttacker = (props) => {
         primary: selectedPrimary,
         secondary: selectedSecondary,
         utility: selectedUtility,
-        ability: selectedAbility
+        ability: selectedAbility,
+        icon: selectedIcon,
+        image: selectedImage
       })
     } catch (err) {
       console.log(err)
@@ -63,6 +70,8 @@ const OperatorSelectorAttacker = (props) => {
   }
 
   //Console.logs for testing
+
+  console.log(createdOp)
 
   return (
     <>
