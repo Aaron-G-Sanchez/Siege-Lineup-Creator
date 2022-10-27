@@ -17,6 +17,13 @@ const Home = (props) => {
           <ViewTeamsNav />
         </Link>
       </main>
+      <footer>
+        <p>
+          This content is not affiliated with, endorsed, sponsored, or
+          specifically approved by Ubisoft and Ubisoft is not responsible for
+          it. For more information see Ubisoft's Fan Content Policy.
+        </p>
+      </footer>
     </>
   )
 }
