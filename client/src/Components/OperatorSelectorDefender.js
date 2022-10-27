@@ -108,9 +108,12 @@ const OperatorSelectorDefender = (props) => {
           </div>
           <div className="equipment-options ability def-options">
             {selectedDefender.ability}
+            <img className="selected-icon" src={selectedDefender.icon} />
           </div>
           {createdOp.utility ? (
-            <button onClick={buttonClick}>Save Operator</button>
+            <button className="save-def-operator" onClick={buttonClick}>
+              Save Operator
+            </button>
           ) : null}
         </div>
       ) : (

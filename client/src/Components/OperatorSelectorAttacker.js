@@ -117,7 +117,9 @@ const OperatorSelectorAttacker = (props) => {
           </div>
           {/* Saves the operator after they select the utility they want to use */}
           {createdOp.utility ? (
-            <button onClick={buttonClick}>Save Operator</button>
+            <button className="save-atk-operator" onClick={buttonClick}>
+              Save Operator
+            </button>
           ) : null}
         </div>
       ) : (

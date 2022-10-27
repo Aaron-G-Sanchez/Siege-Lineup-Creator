@@ -18,14 +18,15 @@ height: 50px;
 
 button {
   border: none;
-  width: 30px;
+  width: 50px;
   transition: .3s;
 }
 
-button:hover {
-  background-color: grey;
+/* button:hover {
+  background-color: #435058;
+  color: #E5E6E4;
   width: 50px;
-}
+} */
 
 input{
   height: 25px;
@@ -269,6 +270,32 @@ background-color: rgba(67, 80, 88, 1);
 .selected-icon{
   margin: 10px;
   width: 130px;
+}
+
+.save-atk-operator{
+  width: 70px;
+  height: 35px;
+  transition: .3s;
+}
+
+.save-atk-operator:hover{
+  height: 50px;
+  background-color: #2499ff;
+  color: #E5E6E4;
+  
+}
+
+.save-def-operator {
+  width: 70px;
+  height: 35px;
+  transition: .3s;
+}
+
+.save-def-operator:hover {
+  height: 50px;
+  background-color: #d89c27;
+  color: #E5E6E4;
+
 }
 
 .remove-op-button {
