@@ -113,6 +113,7 @@ const OperatorSelectorAttacker = (props) => {
           </div>
           <div className="attack-options ability atk-options">
             {selectedAttacker.ability}
+            <img className="selected-icon" src={selectedAttacker.icon} />
           </div>
           {/* Saves the operator after they select the utility they want to use */}
           {createdOp.utility ? (

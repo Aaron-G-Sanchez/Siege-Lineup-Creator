@@ -149,13 +149,13 @@ transition: .3s;
 .selection-card{
   width: 350px;
   height: 400px;
-  background-color: grey;
-  opacity: .5;
+  background-color: rgba(67, 80, 88, .3);
+  color: #e5e6e4;
   transition: .3s;
 }
 
 .selection-card:hover {
-  opacity: 1;
+background-color: rgba(67, 80, 88, 1);
   scale: 1.1;
 }
 
@@ -230,7 +230,7 @@ transition: .3s;
   align-items: center;
   width: 100vw;
   height: 450px;
-  background-color: grey;
+  background-color: rgba(229, 230, 228, .4);
 
 }
 
@@ -264,6 +264,11 @@ transition: .3s;
 .ability{
   width: 150px;
   height: 200px;
+}
+
+.selected-icon{
+  margin: 10px;
+  width: 130px;
 }
 
 .remove-op-button {
