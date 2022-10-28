@@ -43,13 +43,17 @@ If you decide to make a new team, you will be given the oppertunity to pick from
 
 ## Screenshots
 
-####
+#### Created Teams View
 
-![]()
+![Created teams](https://imgur.com/BjEwYja)
 
-####
+#### Operator Selection View
 
-![]()
+![Operator Selection](https://imgur.com/g0kf8xR)
+
+#### Selected Operators View
+
+![Selected Operators View](https://imgur.com/g0kf8xR)
 
 ---
 
