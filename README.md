@@ -1,4 +1,4 @@
-# Siege Lineup Creator
+# Siege Team Creator
 
 # Date: 10/28/22
 
@@ -10,9 +10,9 @@
 
 ## Description
 
-This web app lets a user create a team composition lineup for the game Rainbow 6 Siege. When the user first enters the website, they are greeted with an option to view other lineups or create a new one. If the user decides to create a new lineup, they will select between either attacking or defending, and then select an operator and their equipment one at a time until they have a full 5 stack. Once a full stack is created, the user can then save the lineup and start again.
+This full stack MERN application lets a user create a dynamic team composition for the game Rainbow 6 Siege.
 
-This application is designed to help add some creativity to a team composition.
+Whether attacking or defending, this appliction helps bring some stability to more competative teams that want to define what operators to bring to a round.
 
 A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/8RTk9Yhl/siege-lineup-creator).
 
@@ -21,10 +21,10 @@ A Trello board was used to keep track of development progress and can be viewed 
 ## Technologies Used
 
 - Front-end
-  - HTML
-  - CSS
+  - HTML5
+  - CSS4
   - Javascript
-  - React
+  - React.js
 - Back-end
   - MongoDB
 - Server
@@ -35,7 +35,7 @@ A Trello board was used to keep track of development progress and can be viewed 
 
 ## Getting Started
 
-Navigate to the [website here](). When you arrive on the webpage you have the option to view all operators in the game, create a team and view previously created teams.
+Navigate to the website [here](). When you arrive on the webpage you have the option to view all operators in the game, create a team and view previously created teams.
 
 If you decide to make a new team, you will be given the oppertunity to pick from creating a team of attackers or a team of defenders. Depending on the choice, you will then be able to select from any of the operators in the game. Once the team is saved it can be viewed on the view teams page where every created team is displayed.
 
@@ -59,9 +59,9 @@ If you decide to make a new team, you will be given the oppertunity to pick from
 
 ## **_Task List_**
 
-- [ ] Add new page for each team that is created for equipment information
-- [ ] Add information for every operator
+- [ ] Add information for every operator when they are selected
 - [ ] Rework the backend to suppoet a login functionality
+- [x] Add new page for each team that is created for equipment information
 
 ---
 
