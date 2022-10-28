@@ -119,7 +119,6 @@ const AttackCreator = (props) => {
               op={props.createdTeamMembers[4]}
             />
           </div>
-          {/* {form} */}
         </>
       )}
     </>

@@ -26,7 +26,7 @@ const OperatorSelectorAttacker = (props) => {
       let response = await axios.get(
         `http://localhost:3001/operators/attack/${id}`
       )
-      console.log(response)
+
       setSelectedAttacker(response.data.attackerId)
       setSelectedAttackerName(response.data.attackerId.name)
       setSelectedAbility(response.data.attackerId.ability)
@@ -68,10 +68,6 @@ const OperatorSelectorAttacker = (props) => {
   const getUtility = (e) => {
     setSelectedUtility(e.target.textContent)
   }
-
-  //Console.logs for testing
-
-  console.log(createdOp)
 
   return (
     <>

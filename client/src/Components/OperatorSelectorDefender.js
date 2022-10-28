@@ -25,7 +25,7 @@ const OperatorSelectorDefender = (props) => {
       let response = await axios.get(
         `http://localhost:3001/operators/defense/${id}`
       )
-      // console.log(response.data.defenseId.name)
+
       setSelectedDefender(response.data.defenseId)
       setSelectedDefenderName(response.data.defenseId.name)
       setSelectedAbility(response.data.defenseId.ability)
@@ -67,7 +67,6 @@ const OperatorSelectorDefender = (props) => {
     setSelectedUtility(e.target.textContent)
   }
 
-  console.log(createdOp)
   return (
     <>
       {selectedDefender ? (

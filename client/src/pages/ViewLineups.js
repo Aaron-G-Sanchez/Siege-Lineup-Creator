@@ -9,7 +9,6 @@ const ViewLineups = (props) => {
   const findCreatedTeams = async () => {
     try {
       let response = await axios.get('http://localhost:3001/teams')
-      console.log(response.data.team)
       props.setCreatedTeams(response.data.team)
     } catch (err) {
       console.log(err)

@@ -26,7 +26,7 @@ const DefenseCreator = () => {
   const getCreatedOperators = async () => {
     try {
       let response = await axios.get('http://localhost:3001/teamMembers')
-      // console.log(response.data.teamMember)
+
       setCreatedTeamMembers(response.data.teamMember)
     } catch (err) {
       console.log(err)
