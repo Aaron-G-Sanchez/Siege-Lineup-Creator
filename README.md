@@ -45,15 +45,15 @@ If you decide to make a new team, you will be given the oppertunity to pick from
 
 #### Created Teams View
 
-![Created teams](https://imgur.com/BjEwYja)
+![Created teams](https://i.imgur.com/BjEwYja.png)
 
 #### Operator Selection View
 
-![Operator Selection](https://imgur.com/g0kf8xR)
+![Operator Selection](https://i.imgur.com/g0kf8xR.png)
 
 #### Selected Operators View
 
-![Selected Operators View](https://imgur.com/g0kf8xR)
+![Selected Operators View](https://i.imgur.com/G3J17qK.png)
 
 ---
 
