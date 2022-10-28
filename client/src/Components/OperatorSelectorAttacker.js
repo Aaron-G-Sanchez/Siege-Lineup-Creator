@@ -11,7 +11,6 @@ const OperatorSelectorAttacker = (props) => {
   const [selectedAbility, setSelectedAbility] = useState(null)
   const [selectedIcon, setSelectedIcon] = useState(null)
   const [selectedImage, setSelectedImage] = useState(null)
-  const [isSelected, setIsSelected] = useState(false)
 
   let createdOp = {
     name: selectedAttackerName,

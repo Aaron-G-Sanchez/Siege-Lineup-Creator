@@ -15,6 +15,8 @@ const App = () => {
   const [createdTeamMembers, setCreatedTeamMembers] = useState([])
   const [createdTeams, setCreatedTeams] = useState([])
 
+  const [teamView, setTeamView] = useState(null)
+
   const getOperators = async () => {
     try {
       let response = await axios.get('http://localhost:3001/operators')
@@ -56,7 +58,12 @@ const App = () => {
             />
           }
         />
-        <Route path="/view-lineups/:id" element={<ViewCreatedTeam />} />
+        <Route
+          path="/view-lineups/:id"
+          element={
+            <ViewCreatedTeam teamView={teamView} setTeamView={setTeamView} />
+          }
+        />
       </Routes>
     </>
   )

@@ -364,3 +364,40 @@ color: #e5e6e4;
   height: 150px;
   margin: 0 5px;
 }
+
+.team-view{
+  height: 100vh;
+}
+
+.team-name-main{
+font-size: 70px;
+color: #E5E6E4;
+
+}
+
+.team-specs {
+  width: 80vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(229, 230, 228, .4);
+  filter: drop-shadow(0 0 0.75rem rgb(34, 33, 33));
+  gap: 20px;
+}
+
+.operator-in-team{
+  display: flex;
+  flex-direction: column;
+}
+
+.individual-op{
+  height: 400px;
+}
+
+.operator-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  margin-bottom: 20px;
+}

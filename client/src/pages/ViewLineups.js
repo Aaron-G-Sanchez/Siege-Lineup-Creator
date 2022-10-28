@@ -36,8 +36,8 @@ const ViewLineups = (props) => {
           >
             <p className="team-name">{team.teamName}</p>
             <div className="team-wrapper">
-              {team.operators.map((op) => (
-                <div className="op-display">
+              {team.operators.map((op, index) => (
+                <div key={index} className="op-display">
                   <p>{op.name}</p>
                   <img
                     className="team-portrait"
