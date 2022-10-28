@@ -40,11 +40,21 @@ footer{
   margin: 15px 0;
 }
 
+.nav-options{
+  display: flex;
+  margin: 0 10px;
+}
+
+.nav-options > a{
+  margin: 0 20px;
+}
+
+
 .grid-item{
 display: flex;
 flex-direction: column;
 justify-content: center;
-background-color: rgba(173, 174, 173, .4);
+background-color: rgb(229, 230, 228, .4);
 border: black 1px solid;
 height: 100vh;
 transition: .3s;
@@ -52,7 +62,7 @@ transition: .3s;
 
 
 .grid-item:hover {
-background-color: rgba(173, 174, 173, .8)}
+background-color: rgba(229, 230, 228, .8)}
 
 .main-operator-grid {
   display: flex;

@@ -3,8 +3,11 @@ const Nav = () => {
   return (
     <>
       <nav className="nav-bar">
-        <Link to="/">Home</Link>
-        <Link>View Operators</Link>
+        <div className="nav-options">
+          <Link to="/">Home</Link>
+          <Link to="/view-ops">View Operators</Link>
+          <Link to="/view-lineups">View Teams</Link>
+        </div>
       </nav>
     </>
   )
