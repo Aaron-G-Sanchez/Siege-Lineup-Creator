@@ -121,7 +121,7 @@ const main = async () => {
       secondary: ['P9', 'LFP586'],
       utility: ['Smoke Grenade', 'Claymore'],
       ability: 'Shock Drones',
-      team: 'Attacker',
+      team: 'Attack',
       icon: 'https://i.imgur.com/Z331jVv.png',
       image:
         'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Z9R1Anc8MHwbG5iyPoOf2/69fe9aee30e03322a4e09d4b87de15aa/r6-operators-list-twitch.png'
