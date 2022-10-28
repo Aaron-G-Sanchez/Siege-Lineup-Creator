@@ -1,6 +1,9 @@
+import Nav from '../pages/Nav'
+
 const ViewOperators = (props) => {
   return (
     <>
+      <Nav />
       <section className="main-operator-grid">
         {props.operators.map((operator) => (
           <div className="operator-card" key={operator._id}>

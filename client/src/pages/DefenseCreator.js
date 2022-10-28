@@ -90,6 +90,7 @@ const DefenseCreator = () => {
         </div>
       ) : (
         <>
+          {form}
           <div className="team-selection-grid">
             <TeamSelectionCard
               defenders={defenders}
@@ -117,7 +118,6 @@ const DefenseCreator = () => {
               op={createdTeamMembers[4]}
             />
           </div>
-          {form}
         </>
       )}
     </>

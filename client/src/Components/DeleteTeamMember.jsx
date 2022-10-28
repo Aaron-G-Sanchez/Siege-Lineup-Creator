@@ -15,7 +15,7 @@ const handleClick = async () => {
   return (
     <>
     <div>
-      <button onClick={handleClick}>X</button>
+      <button className='delete'onClick={handleClick}>X</button>
     </div>
     </>
   )

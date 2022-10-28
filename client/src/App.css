@@ -8,13 +8,19 @@ main {
 a {
   text-decoration: none;
   color: black;
-  
+  transition: .3s;
+}
+
+a:hover {
+  color: #E5E6E4;
+  text-decoration: underline;
 }
 
 nav{
-background-color: #E5E6E4;
+background-color: rgba(229, 230, 228, .5);
 height: 50px;
 }
+
 
 button {
   border: none;
@@ -22,14 +28,9 @@ button {
   transition: .3s;
 }
 
-/* button:hover {
-  background-color: #435058;
-  color: #E5E6E4;
-  width: 50px;
-} */
-
 input{
   height: 25px;
+  width: 250px;
 }
 
 p{
@@ -43,6 +44,7 @@ footer{
 .nav-options{
   display: flex;
   margin: 0 10px;
+  padding: 15px;
 }
 
 .nav-options > a{
@@ -62,14 +64,15 @@ transition: .3s;
 
 
 .grid-item:hover {
-background-color: rgba(229, 230, 228, .8)}
+background-color: rgba(229, 230, 228, .8);
+}
 
 .main-operator-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 90vw;
-  margin: 0 auto;
+  margin: 20px auto;
   gap: 15px
 }
 
@@ -117,8 +120,8 @@ background-color: rgba(229, 230, 228, .8)}
   width: 300px;
   height: 300px;
   background-color: #E5E6E4;
-  /* background-color: #2499ff; */
   transition: .3s;
+  filter: drop-shadow(0 0 0.75rem rgb(34, 33, 33));
 }
 
 .attack:hover{
@@ -131,8 +134,8 @@ background-color: rgba(229, 230, 228, .8)}
   width: 300px;
   height: 300px;
   background-color: #E5E6E4;
-/* background-color: #d89c27; */
-transition: .3s;
+  filter: drop-shadow(0 0 0.75rem rgb(34, 33, 33));
+  transition: .3s;
 }
 
 .defense:hover {
@@ -147,18 +150,8 @@ transition: .3s;
   align-items: center;
   height: 100vh;
   background-color: rgba(229, 230, 228, .2);
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 100vw;
-  margin: 0 auto */
 }
 
-/* .selection-options{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-} */
 
 .selection-card{
   width: 350px;
@@ -245,7 +238,7 @@ background-color: rgba(67, 80, 88, 1);
   width: 100vw;
   height: 450px;
   background-color: rgba(229, 230, 228, .4);
-
+  filter: drop-shadow(0 0 0.75rem rgb(34, 33, 33));
 }
 
 .equipment-options{
@@ -275,7 +268,7 @@ background-color: rgba(67, 80, 88, 1);
   background-color: #d89c27;
 }
 
-.is-active{
+.is-selected{
   background-color: #E5E6E4;
 }
 
@@ -315,8 +308,12 @@ background-color: rgba(67, 80, 88, 1);
 
 }
 
-.remove-op-button {
-  z-index: 69;
+.delete:hover{
+width: 70px;
+}
+
+.save-team-form{
+  background-color: #e5e6e4;
 }
 
 form > button {
@@ -326,7 +323,8 @@ form > button {
 }
 
 form > button:hover {
-
+background-color: #435058;
+color: #e5e6e4;
   width: 110px;
 }
 
@@ -350,6 +348,7 @@ form > button:hover {
 .team-name{
   background-color: #E5E6E4;
   height: 25px;
+  line-height: 25px;
 }
 
 .team-wrapper {
@@ -360,6 +359,8 @@ form > button:hover {
   background-color: rgba(229, 230, 228, .2);
 }
 
+
 .team-portrait{
   height: 150px;
+  margin: 0 5px;
 }

@@ -12,8 +12,6 @@ const AttackCreator = (props) => {
   const [attackers, setAttackers] = useState([])
   const [isClosed, setIsClosed] = useState(false)
 
-  // const [createdTeamMembers, setCreatedTeamMembers] = useState([])
-
   const [teamName, setTeamName] = useState('')
 
   const getAttackOps = async () => {
@@ -93,6 +91,7 @@ const AttackCreator = (props) => {
         </div>
       ) : (
         <>
+          {form}
           <div className="team-selection-grid">
             <TeamSelectionCard
               attackers={attackers}
@@ -120,7 +119,7 @@ const AttackCreator = (props) => {
               op={props.createdTeamMembers[4]}
             />
           </div>
-          {form}
+          {/* {form} */}
         </>
       )}
     </>
