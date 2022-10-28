@@ -1,8 +1,11 @@
 import axios from 'axios'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Nav from './Nav'
 
 const ViewLineups = (props) => {
+  let navigate = useNavigate()
+
   const findCreatedTeams = async () => {
     try {
       let response = await axios.get('http://localhost:3001/teams')
@@ -11,6 +14,10 @@ const ViewLineups = (props) => {
     } catch (err) {
       console.log(err)
     }
+  }
+
+  const getTeamId = (id) => {
+    navigate(`${/view-lineups/}${id}`)
   }
 
   useEffect(() => {
@@ -22,7 +29,11 @@ const ViewLineups = (props) => {
       <Nav />
       <section className="team-display">
         {props.createdTeams.map((team) => (
-          <div className="team-card" key={team._id}>
+          <div
+            className="team-card"
+            key={team._id}
+            onClick={() => getTeamId(team._id)}
+          >
             <p className="team-name">{team.teamName}</p>
             <div className="team-wrapper">
               {team.operators.map((op) => (

@@ -35,6 +35,10 @@ A Trello board was used to keep track of development progress and can be viewed 
 
 ## Getting Started
 
+Navigate to the [website here](). When you arrive on the webpage you have the option to view all operators in the game, create a team and view previously created teams.
+
+If you decide to make a new team, you will be given the oppertunity to pick from creating a team of attackers or a team of defenders. Depending on the choice, you will then be able to select from any of the operators in the game. Once the team is saved it can be viewed on the view teams page where every created team is displayed.
+
 ---
 
 ## Screenshots
@@ -51,13 +55,16 @@ A Trello board was used to keep track of development progress and can be viewed 
 
 ## **_Task List_**
 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] Add new page for each team that is created for equipment information
+- [ ] Add information for every operator
+- [ ] Rework the backend to suppoet a login functionality
 
 ---
 
 ## **_Credits_**
 
----
+All operators & images - [Ubisoft](https://www.ubisoft.com/en-us/game/rainbow-six/siege)
+
+This content is not affiliated with, endorsed, sponsored, or
+specifically approved by Ubisoft and Ubisoft is not responsible for
+it. For more information see Ubisoft's Fan Content Policy.

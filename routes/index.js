@@ -26,4 +26,6 @@ router.post('/saveTeam', controllers.saveTeam)
 
 router.get('/teams', controllers.findCreatedTeams)
 
+router.get('/teams/:id', controllers.findTeamById)
+
 module.exports = router

@@ -8,6 +8,7 @@ import CreateLineup from './pages/CreateLineup'
 import AttackCreator from './pages/AttackCreator'
 import DefenseCreator from './pages/DefenseCreator'
 import ViewLineups from './pages/ViewLineups'
+import ViewCreatedTeam from './pages/ViewCreatedTeam'
 
 const App = () => {
   const [operators, setOperators] = useState([])
@@ -55,6 +56,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/view-lineups/:id" element={<ViewCreatedTeam />} />
       </Routes>
     </>
   )

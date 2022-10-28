@@ -104,6 +104,18 @@ const findCreatedTeams = async (req, res) => {
   }
 }
 
+const findTeamById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const teamId = await Team.findById(id)
+    if (teamId) {
+      return res.status(200).json({ teamId })
+    }
+  } catch (err) {
+    return res.status(500).send(err.message)
+  }
+}
+
 module.exports = {
   findAllOperators,
   findAttackOps,
@@ -114,5 +126,6 @@ module.exports = {
   getTeamMember,
   deleteTeamMemberById,
   saveTeam,
-  findCreatedTeams
+  findCreatedTeams,
+  findTeamById
 }
