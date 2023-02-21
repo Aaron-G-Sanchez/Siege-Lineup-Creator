@@ -55,6 +55,7 @@ const AttackCreator = (props) => {
   }
   const handleChange = (e) => {
     setTeamName(e.target.value)
+    console.log(teamName)
   }
 
   const handleSubmit = (e) => {

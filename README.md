@@ -4,7 +4,7 @@
 
 ## By: Aaron Sanchez
 
-[GitHub](https://github.com/Aaron-G-Sanchez) | [LinkdIn](https://www.linkedin.com/feed/) | [Twitter](https://twitter.com/?lang=en)
+[GitHub](https://github.com/Aaron-G-Sanchez) | [LinkdIn](https://www.linkedin.com/in/aaron-g-sanchez/)
 
 ---
 
@@ -35,7 +35,7 @@ A Trello board was used to keep track of development progress and can be viewed 
 
 ## Getting Started
 
-Navigate to the website [here](). When you arrive on the webpage you have the option to view all operators in the game, create a team and view previously created teams.
+When you arrive on the webpage you have the option to view all operators in the game, create a team and view previously created teams.
 
 If you decide to make a new team, you will be given the oppertunity to pick from creating a team of attackers or a team of defenders. Depending on the choice, you will then be able to select from any of the operators in the game. Once the team is saved it can be viewed on the view teams page where every created team is displayed.
 
@@ -60,7 +60,7 @@ If you decide to make a new team, you will be given the oppertunity to pick from
 ## **_Task List_**
 
 - [ ] Add information for every operator when they are selected
-- [ ] Rework the backend to suppoet a login functionality
+- [ ] Rework the backend to support a login functionality
 - [x] Add new page for each team that is created for equipment information
 
 ---
